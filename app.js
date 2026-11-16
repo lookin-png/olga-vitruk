@@ -9,6 +9,19 @@ descriptions.weave='Крупная вязка, деревянное плетен
 descriptions.sculpture='Белый рельеф, текучие складки, лепестки и пластика движения. От лёгкого акцента до объёмного орнамента на всю стену. Пропорции и ритм адаптируем к вашему пространству.';
 const resolveAsset=path=>window.VITRUK_ASSETS?.[path]||path;
 const art = [
+ ["a217", "Вересковый переплёт", "weave", "217-heather-interlace.webp"],
+ ["a218", "Белая камелия", "sculpture", "218-white-camellia.webp"],
+ ["a219", "Дымчатый нефрит", "mineral", "219-smoky-jade.webp"],
+ ["a220", "Ветровые линии", "texture", "220-wind-lines.webp"],
+ ["a221", "Лунная протея", "botanic", "221-moon-protea.webp"],
+ ["a222", "Слива и перламутр", "fluid", "222-plum-nacre.webp"],
+ ["a223", "Лавандовый опал", "light", "223-lavender-opal.webp"],
+ ["a224", "Оливковая терраса", "fresco", "224-olive-terrace-mosaic.webp"],
+ ["a225", "Сад на голубом бетоне", "shadow", "225-blue-concrete-garden.webp"],
+ ["a226", "Своды графита", "optical", "226-graphite-vaults.webp"],
+ ["a227", "Платановый свет", "shadow", "227-plane-tree-light.webp"],
+ ["a228", "Чернильные сумерки", "shadow", "228-ink-dusk.webp"],
+ ["a229", "Оливковое кружево", "shadow", "229-olive-lace.webp"],
  ["a187", "Кашемировый рельеф", "weave", "187-cashmere-relief.webp"],
  ["a190", "Хризантемовый вихрь", "sculpture", "190-chrysanthemum-vortex.webp"],
  ["a193", "Арктический разлом", "mineral", "193-arctic-fault.webp"],
