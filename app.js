@@ -1,7 +1,7 @@
 // Inline SVG icons keep controls consistent across iOS, Android and desktop.
 const iconPaths={"arrow-ne":"M5 19 19 5M5 5h14v14","arrow-se":"M5 5l14 14M5 19h14V5","arrow-left":"M19 12H5m7-7-7 7 7 7","arrow-right":"M5 12h14m-7-7 7 7-7 7","arrow-up":"M12 19V5m-7 7 7-7 7 7","arrow-down":"M12 5v14m-7-7 7 7 7-7","heart":"M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z","menu":"M4 6h16M4 12h16M4 18h16","close":"m6 6 12 12M6 18 18 6","pause":"M8 5v14M16 5v14","play":"m8 5 11 7-11 7Z"};
 function icon(name){return `<svg class="icon icon-${name}" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="${iconPaths[name]}"/></svg>`;}
-const categories = {surreal:'За гранью сна',nature:'Память природы',weave:'Вязка и плетение',sculpture:'Застывшее движение',mineral:'Минеральная драматургия',slate:'Гибкий сланец',texture:'Тихая фактура',botanic:'Новая ботаника',fluid:'Жидкий цвет',light:'Свет и глубина',fresco:'Арт-фрески',shadow:'Свет и тень',optical:'Оптические иллюзии'};
+const categories = {forest:'Лесной свет',sky:'Небо и облака',surreal:'За гранью сна',nature:'Память природы',weave:'Вязка и плетение',sculpture:'Застывшее движение',mineral:'Минеральная драматургия',slate:'Гибкий сланец',texture:'Тихая фактура',botanic:'Новая ботаника',fluid:'Жидкий цвет',light:'Свет и глубина',fresco:'Арт-фрески',shadow:'Свет и тень',optical:'Оптические иллюзии'};
 const descriptions = {mineral:'Геологический рисунок с характером. Крупные прожилки, неожиданные сочетания оттенков и ощущение природного масштаба.',texture:'Спокойная палитра и тактильная выразительность. Образ, который раскрывается в боковом свете и создаёт глубину без визуального шума.',botanic:'Природа как художественный жест. Выразительные силуэты, сложный цвет и масштаб, который превращает стену в самостоятельную композицию.',fluid:'Движение цвета, текучие границы и многослойность. Для акцентной поверхности, которая становится эмоциональным центром интерьера.',light:'Свет как часть композиции. Прозрачные и полупрозрачные слои, глубина изображения и выразительный силуэт арт-объекта.',fresco:'Живописный образ в архитектурном масштабе. Ритм, воздух и композиция, адаптированные под стену, мебель и точки обзора.'};
 descriptions.shadow='Растительная графика, женские силуэты, архитектура и отражённый свет. Выразительные тени соединяют ритм орнамента с фактурой поверхности.';
 descriptions.optical='Игра перспективы, ритма и тональных переходов. Рисунок создаёт ощущение глубины и меняет восприятие плоскости.';
@@ -10,8 +10,26 @@ descriptions.sculpture='Белый рельеф, текучие складки, 
 descriptions.slate='Слоистый каменный рисунок, тонкие сколы и матовая глубина. От серебристых и молочных оттенков до графита, меди и оливы. Масштаб фактуры и цвет адаптируем к вашему интерьеру.';
 descriptions.nature='Природные фактуры в крупном масштабе: глубина льда, линии трещин и следы времени. Превращаем их в образы, которые хочется рассматривать. Цвет и масштаб рисунка адаптируем к вашему пространству.';
 descriptions.surreal='Пространства на границе сна и реальности: парящие скалы, невозможные лестницы, серебряные сады и отражения. От глубокого чёрного до прозрачного света. Композицию и масштаб образа адаптируем к вашему интерьеру.';
+descriptions.forest='Леса в разное время года: солнечные просветы, лунные ветви и цветные туманы. Глубина пейзажа и ритм стволов превращают стену в продолжение пространства. Палитру и масштаб адаптируем к вашему интерьеру.';
+descriptions.sky='Свет и движение облаков — от прозрачного рассвета до глубокого заката. Фотографические и живописные небесные образы, которые добавляют пространству воздуха. Оттенки и композицию подбираем под ваш интерьер.';
 const resolveAsset=path=>window.VITRUK_ASSETS?.[path]||path;
 const art = [
+ ["a267", "Весенний просвет", "forest", "267-spring-clearing.webp"],
+ ["a268", "Лунная магнолия", "forest", "268-moonlit-magnolia-grove.webp"],
+ ["a269", "Изумрудный полдень", "forest", "269-emerald-noon.webp"],
+ ["a270", "Сумерки секвой", "forest", "270-redwood-twilight.webp"],
+ ["a271", "Янтарный бук", "forest", "271-amber-beech.webp"],
+ ["a272", "Клёновый ноктюрн", "forest", "272-maple-nocturne.webp"],
+ ["a273", "Серебряный бор", "forest", "273-silver-pine-forest.webp"],
+ ["a274", "Розовый иней", "forest", "274-rose-hoarfrost-forest.webp"],
+ ["a275", "Перламутровое утро", "sky", "275-pearl-morning-sky.webp"],
+ ["a276", "Медовый горизонт", "sky", "276-honey-sunset-clouds.webp"],
+ ["a277", "После грозы", "sky", "277-after-the-storm-sky.webp"],
+ ["a278", "Абрикосовый воздух", "sky", "278-apricot-air-clouds.webp"],
+ ["a279", "Лиловый вечер", "sky", "279-lilac-evening-clouds.webp"],
+ ["a280", "Высота", "sky", "280-high-clouds.webp"],
+ ["a281", "Тихое золото", "sky", "281-quiet-gold-clouds.webp"],
+ ["a282", "Розовое серебро", "sky", "282-rose-silver-dusk.webp"],
  ["a245", "Разрыв небес", "surreal", "245-rift-of-light.webp"],
  ["a246", "Невесомый камень", "surreal", "246-weightless-stone.webp"],
  ["a247", "Лестницы вне времени", "surreal", "247-stairs-outside-time.webp"],
@@ -268,19 +286,66 @@ const art = [
  ["a266", "Ступени в бесконечность", "surreal", "266-steps-into-infinity.webp"]
 ].map(([id,title,category,file])=>({id,title,category,image:resolveAsset('assets/'+file)}));
 let favorites=new Set();try{const saved=JSON.parse(localStorage.getItem('vitruk-favorites')||'[]');if(Array.isArray(saved))favorites=new Set(saved.filter(id=>art.some(a=>a.id===id)));}catch{}
+// Fixed covers keep every collection visible as the catalog grows.
+const collectionCovers={mineral:'a01',texture:'a03',botanic:'a02',forest:'a267',shadow:'a227',sky:'a280',fresco:'a06',sculpture:'a135',weave:'a129',fluid:'a04',light:'a05',optical:'a226',slate:'a230',nature:'a240',surreal:'a247'};
+const collectionOrder=[...document.querySelectorAll('[data-filter]')].map(b=>b.dataset.filter).filter(key=>categories[key]);
+function artworkCount(n){const last=n%10,lastTwo=n%100;return n+' '+(last===1&&lastTwo!==11?'образ':last>=2&&last<=4&&(lastTwo<12||lastTwo>14)?'образа':'образов');}
 let filter='all',limit=art.length,current=0,dialogItems=art;
 const gallery=document.querySelector('#gallery'),dialog=document.querySelector('#art-dialog');
 const escapeHTML=s=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function filtered(){return art.filter(a=>filter==='all'||(filter==='favorites'?favorites.has(a.id):a.category===filter));}
-function render(){const items=filtered();const shown=items.slice(0,limit);gallery.innerHTML=shown.map(a=>`<article class="card"><div class="card-image"><button class="art-open" data-open="${a.id}" aria-label="Рассмотреть образ ${a.title}"><img src="${a.image}" alt="${a.title} — ${categories[a.category]}" loading="lazy" width="800" height="600"></button><button class="save-art" data-save="${a.id}" aria-label="${favorites.has(a.id)?'Убрать из избранного':'Сохранить'}: ${a.title}" aria-pressed="${favorites.has(a.id)}">${icon('heart')}</button></div><div class="card-info"><div><h3>${a.title}</h3><p>${categories[a.category]}</p></div><button data-open="${a.id}" aria-label="Открыть ${a.title}">${icon('arrow-ne')}</button></div></article>`).join('');document.querySelector('#more').hidden=shown.length>=items.length;document.querySelector('#empty-gallery').hidden=items.length>0;document.querySelector('#gallery-count').textContent=`${String(shown.length).padStart(2,'0')} / ${String(items.length).padStart(2,'0')} образов`;updateCounts();}
+function render(){
+ const overview=filter==='all',items=filtered(),shown=items.slice(0,limit);
+ gallery.classList.toggle('gallery-overview',overview);
+ if(overview){
+  gallery.innerHTML=collectionOrder.map(category=>{
+   const works=art.filter(a=>a.category===category);
+   const cover=works.find(a=>a.id===collectionCovers[category])||works[0];
+   if(!cover)return '';
+   const title=categories[category],label=escapeHTML('Открыть коллекцию «'+title+'»: '+artworkCount(works.length));
+   return `<article class="card collection-card"><div class="card-image"><button class="art-open collection-open" data-collection="${category}" aria-label="${label}"><img src="${cover.image}" alt="${escapeHTML(cover.title)} — ${escapeHTML(title)}" loading="lazy" width="800" height="600"></button></div><div class="card-info"><div><h3>${escapeHTML(title)}</h3><p>${artworkCount(works.length)}</p></div><button data-collection="${category}" aria-label="${label}">${icon('arrow-right')}</button></div></article>`;
+  }).join('');
+ }else{
+  gallery.innerHTML=shown.map(a=>`<article class="card"><div class="card-image"><button class="art-open" data-open="${a.id}" aria-label="Рассмотреть образ ${a.title}"><img src="${a.image}" alt="${a.title} — ${categories[a.category]}" loading="lazy" width="800" height="600"></button><button class="save-art" data-save="${a.id}" aria-label="${favorites.has(a.id)?'Убрать из избранного':'Сохранить'}: ${a.title}" aria-pressed="${favorites.has(a.id)}">${icon('heart')}</button></div><div class="card-info"><div><h3>${a.title}</h3><p>${categories[a.category]}</p></div><button data-open="${a.id}" aria-label="Открыть ${a.title}">${icon('arrow-ne')}</button></div></article>`).join('');
+ }
+ document.querySelector('#collection-navigation').hidden=overview;
+ document.querySelector('#active-collection').textContent=filter==='favorites'?'Избранные образы':categories[filter]||'';
+ document.querySelector('#more').hidden=overview||shown.length>=items.length;
+ document.querySelector('#empty-gallery').hidden=overview||items.length>0;
+ document.querySelector('#gallery-count').textContent=overview?collectionOrder.length+' коллекций / '+artworkCount(art.length):artworkCount(shown.length);
+ updateCounts();
+}
+function selectFilter(value){
+ if(value!=='all'&&value!=='favorites'&&!categories[value])return;
+ filter=value;limit=art.length;
+ document.querySelectorAll('[data-filter]').forEach(b=>{const active=b.dataset.filter===filter;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
+ render();
+}
 function updateCounts(){document.querySelector('#fav-count').textContent=favorites.size;document.querySelector('#selected-brief').textContent=favorites.size?'В вашем выборе: '+art.filter(a=>favorites.has(a.id)).map(a=>a.title).join(', '):'Можно добавить образы из коллекции';}
 let toastTimer;function toast(text){const el=document.querySelector('.toast');el.textContent=text;el.classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('visible'),2600);}
 function save(id){if(favorites.has(id)){favorites.delete(id);toast('Образ убран из избранного');}else{favorites.add(id);toast('Образ добавлен к вашей идее');}try{localStorage.setItem('vitruk-favorites',JSON.stringify([...favorites]));}catch{}render();if(dialog.open)updateDialogFavorite();}
 function updateDialogFavorite(){const a=dialogItems[current],saved=favorites.has(a.id);const b=document.querySelector('#dialog-favorite');b.innerHTML=icon('heart')+'<span>'+(saved?'Образ сохранён':'Сохранить образ')+'</span>';b.setAttribute('aria-pressed',saved);}
 function showArt(id){dialogItems=filtered();current=dialogItems.findIndex(a=>a.id===id);if(current<0){dialogItems=art;current=art.findIndex(a=>a.id===id);}fillDialog();dialog.showModal();}
 function fillDialog(){const a=dialogItems[current];document.querySelector('#dialog-image').src=a.image;document.querySelector('#dialog-image').alt=a.title+' — '+categories[a.category];document.querySelector('#dialog-title').textContent=a.title;document.querySelector('#dialog-type').textContent=categories[a.category];document.querySelector('#dialog-description').textContent=descriptions[a.category];document.querySelector('#dialog-source').textContent='Интерьерная визуализация. Образ адаптируется к вашему пространству и выбранному материалу.';document.querySelector('#dialog-number').textContent=`${current+1} / ${dialogItems.length}`;updateDialogFavorite();}
-document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;limit=art.length;document.querySelectorAll('[data-filter]').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',x===b);});render();}));
-gallery.addEventListener('click',e=>{const open=e.target.closest('[data-open]'),saveButton=e.target.closest('[data-save]');if(open)showArt(open.dataset.open);if(saveButton){const id=saveButton.dataset.save;save(id);gallery.querySelector(`[data-save="${id}"]`)?.focus({preventScroll:true});}});
+document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>selectFilter(b.dataset.filter)));
+gallery.addEventListener('click',e=>{
+ const collection=e.target.closest('[data-collection]');
+ if(collection){
+  selectFilter(collection.dataset.collection);
+  document.querySelector('#collection-navigation').scrollIntoView({block:'start',behavior:'instant'});
+  document.querySelector('#collections-back').focus({preventScroll:true});
+  return;
+ }
+ const open=e.target.closest('[data-open]'),saveButton=e.target.closest('[data-save]');
+ if(open)showArt(open.dataset.open);
+ if(saveButton){const id=saveButton.dataset.save;save(id);gallery.querySelector(`[data-save="${id}"]`)?.focus({preventScroll:true});}
+});
+document.querySelector('#collections-back').addEventListener('click',()=>{
+ const previous=filter;selectFilter('all');
+ const cover=gallery.querySelector(`.collection-open[data-collection="${previous}"]`);
+ if(cover){cover.focus({preventScroll:true});cover.scrollIntoView({block:'center',behavior:'instant'});}
+ else document.querySelector('[data-filter="all"]').focus();
+});
 document.querySelector('#more').addEventListener('click',()=>{limit+=8;render();});
 document.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});
 function step(n){current=(current+n+dialogItems.length)%dialogItems.length;fillDialog();}document.querySelector('#previous').addEventListener('click',()=>step(-1));document.querySelector('#next').addEventListener('click',()=>step(1));dialog.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){e.preventDefault();step(-1);}if(e.key==='ArrowRight'){e.preventDefault();step(1);}});
