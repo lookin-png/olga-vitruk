@@ -263,7 +263,9 @@ const art = [
  ["a20", "Складки горизонта", "optical", "08-folded-horizon.webp"],
  ["a21", "Эхо арок", "optical", "09-echo-arches.webp"],
  ["a22", "Шёлковый муар", "optical", "10-moire-silk.webp"],
- ['a01','Тектоника','mineral','hero.webp'],['a02','Тихий гербарий','botanic','botanic.webp'],['a03','Память земли','texture','relief.webp'],['a04','Глубокое течение','fluid','fluid.webp'],['a05','Янтарный свет','light','light.webp'],['a06','Дальний берег','fresco','fresco.webp'],['a07','Лесная графика','fresco','wood.webp'],['a08','Кобальтовый жест','fluid','ceramic.webp'],['a09','Серебряный разлом','mineral','mineral-silver.webp'],['a10','След времени','texture','texture-limestone.webp'],['a11','Сумеречный сад','botanic','botanic-burgundy.webp'],['a12','Дымчатый горизонт','light','light-smoke.webp']
+ ['a01','Тектоника','mineral','hero.webp'],['a02','Тихий гербарий','botanic','botanic.webp'],['a03','Память земли','texture','relief.webp'],['a04','Глубокое течение','fluid','fluid.webp'],['a05','Янтарный свет','light','light.webp'],['a06','Дальний берег','fresco','fresco.webp'],['a07','Лесная графика','fresco','wood.webp'],['a08','Кобальтовый жест','fluid','ceramic.webp'],['a09','Серебряный разлом','mineral','mineral-silver.webp'],['a10','След времени','texture','texture-limestone.webp'],['a11','Сумеречный сад','botanic','botanic-burgundy.webp'],['a12','Дымчатый горизонт','light','light-smoke.webp'],
+ ["a265", "Воздух во льду", "nature", "265-air-within-ice.webp"],
+ ["a266", "Ступени в бесконечность", "surreal", "266-steps-into-infinity.webp"]
 ].map(([id,title,category,file])=>({id,title,category,image:resolveAsset('assets/'+file)}));
 let favorites=new Set();try{const saved=JSON.parse(localStorage.getItem('vitruk-favorites')||'[]');if(Array.isArray(saved))favorites=new Set(saved.filter(id=>art.some(a=>a.id===id)));}catch{}
 let filter='all',limit=art.length,current=0,dialogItems=art;
