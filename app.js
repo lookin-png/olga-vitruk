@@ -14,6 +14,27 @@ descriptions.forest='Леса в разное время года: солнеч�
 descriptions.sky='Свет и движение облаков — от прозрачного рассвета до глубокого заката. Фотографические и живописные небесные образы, которые добавляют пространству воздуха. Оттенки и композицию подбираем под ваш интерьер.';
 const resolveAsset=path=>window.VITRUK_ASSETS?.[path]||path;
 const art = [
+ ["a347", "Кружево инея", "weave", "347-lace-ice-relief.webp"],
+ ["a348", "Белое кружевное поле", "weave", "348-lace-ice-relief.webp"],
+ ["a349", "Серебряная паутина", "weave", "349-lace-ice-relief.webp"],
+ ["a350", "Бирюзовый взрыв льда", "nature", "350-lace-ice-relief.webp"],
+ ["a351", "Сердце байкальского льда", "nature", "351-lace-ice-relief.webp"],
+ ["a352", "Тёплые волны", "sculpture", "352-lace-ice-relief.webp"],
+ ["a353", "Лепестки света", "sculpture", "353-lace-ice-relief.webp"],
+ ["a354", "Восходящий шёлк", "sculpture", "354-lace-ice-relief.webp"],
+ ["a355", "Течения известняка", "sculpture", "355-lace-ice-relief.webp"],
+ ["a356", "Цветущий ветер", "sculpture", "356-lace-ice-relief.webp"],
+ ["a357", "Серебряные пласты", "sculpture", "357-lace-ice-relief.webp"],
+ ["a358", "Белое течение", "sculpture", "358-lace-ice-relief.webp"],
+ ["a359", "Холодная волна", "sculpture", "359-lace-ice-relief.webp"],
+ ["a360", "Вертикаль света", "sculpture", "360-lace-ice-relief.webp"],
+ ["a361", "Ледяной рельеф", "sculpture", "361-lace-ice-relief.webp"],
+ ["a362", "Серебряные пласты · мягкий ритм", "sculpture", "362-lace-ice-relief.webp"],
+ ["a363", "Белое течение · тихий ритм", "sculpture", "363-lace-ice-relief.webp"],
+ ["a364", "Холодная волна · воздух", "sculpture", "364-lace-ice-relief.webp"],
+ ["a365", "Вертикаль света · пауза", "sculpture", "365-lace-ice-relief.webp"],
+ ["a366", "Ледяной рельеф · мягкий ритм", "sculpture", "366-lace-ice-relief.webp"],
+ ["a367", "Цветущий ветер · воздушный", "sculpture", "367-lace-ice-relief.webp"],
  ["a283", "Хрустальное созвездие", "nature", "283-november26.webp"],
  ["a284", "Ледяное кружево", "nature", "284-november26.webp"],
  ["a285", "Серебро мороза", "nature", "285-november26.webp"],
@@ -423,8 +444,8 @@ render();
 (()=>{
  const hero=document.querySelector('.hero'),stage=document.querySelector('#hero-carousel');
  const slides=[...document.querySelectorAll('.hero-slide')],dots=[...document.querySelectorAll('[data-slide]')];
- const names=['Тектоника','Лесное отражение','Сила жеста','Янтарный вечер','Тень кроны','Сосновый час'];
- const labels=['МИНЕРАЛЬНАЯ ДРАМАТУРГИЯ','ПАНОРАМНАЯ ФРЕСКА','ИСКУССТВО НА КЕРАМИКЕ','СВЕТ И ГЛУБИНА','БЕТОН И МЯГКИЕ ТЕНИ','ГРАФИКА ВЕЧЕРНЕГО СВЕТА'];
+ const names=["Северный лабрадор", "Пепельная кора", "Фарфоровый папоротник", "Сумерки секвой", "Отражение тростника", "Перламутровое утро", "Северные сосны", "Шёлк ветра", "Шалфейный стежок", "Слива и перламутр", "Ледяной тростник", "Серебряный изгиб", "Кварцевый шов", "Застывшее дыхание", "Ступени в бесконечность"];
+ const labels=["МИНЕРАЛЬНАЯ ДРАМАТУРГИЯ", "ТИХАЯ ФАКТУРА", "НОВАЯ БОТАНИКА", "ЛЕСНОЙ СВЕТ", "СВЕТ И ТЕНЬ", "НЕБО И ОБЛАКА", "АРТ-ФРЕСКИ", "ЗАСТЫВШЕЕ ДВИЖЕНИЕ", "ВЯЗКА И ПЛЕТЕНИЕ", "ЖИДКИЙ ЦВЕТ", "СВЕТ И ГЛУБИНА", "ОПТИЧЕСКИЕ ИЛЛЮЗИИ", "ГИБКИЙ СЛАНЕЦ", "ПАМЯТЬ ПРИРОДЫ", "ЗА ГРАНЬЮ СНА"];
  const pause=document.querySelector('#hero-pause');
  let index=0,playing=true,inView=true,timer=null,request=0;
  function updatePlayback(){pause.innerHTML=icon(playing?'pause':'play');pause.setAttribute('aria-label',playing?'Приостановить слайд-шоу':'Запустить слайд-шоу');hero.dataset.playing=String(playing);}
