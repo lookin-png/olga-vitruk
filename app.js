@@ -14,9 +14,9 @@ descriptions.forest='Леса в разное время года: солнеч�
 descriptions.sky='Свет и движение облаков — от прозрачного рассвета до глубокого заката. Фотографические и живописные небесные образы, которые добавляют пространству воздуха. Оттенки и композицию подбираем под ваш интерьер.';
 const resolveAsset=path=>window.VITRUK_ASSETS?.[path]||path;
 const art = [
- ["a347", "Кружево инея", "weave", "347-lace-ice-relief.webp"],
- ["a348", "Белое кружевное поле", "weave", "348-lace-ice-relief.webp"],
- ["a349", "Серебряная паутина", "weave", "349-lace-ice-relief.webp"],
+ ["a347", "Кружево инея", "nature", "347-lace-ice-relief.webp"],
+ ["a348", "Белое кружевное поле", "nature", "348-lace-ice-relief.webp"],
+ ["a349", "Серебряная паутина", "nature", "349-lace-ice-relief.webp"],
  ["a350", "Бирюзовый взрыв льда", "nature", "350-lace-ice-relief.webp"],
  ["a351", "Сердце байкальского льда", "nature", "351-lace-ice-relief.webp"],
  ["a352", "Тёплые волны", "sculpture", "352-lace-ice-relief.webp"],
